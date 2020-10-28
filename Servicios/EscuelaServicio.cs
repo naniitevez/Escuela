@@ -15,6 +15,7 @@ namespace ProyectoDeEscuela
             Escuela escuela = new Escuela();
             escuela.Alumnos = alumnoServicio.ObtenerTodos();
             escuela.Materias = materiaServicio.ObtenerTodas();
+
             return escuela;
         }
     }

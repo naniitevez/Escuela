@@ -170,5 +170,40 @@ namespace ProyectoDeEscuela
             return alumnos;
 
         }
+
+        public Alumno ObtenerPorNombre(string nombre)
+        {
+            List<Alumno> listaDeAlumnos = ObtenerTodos();
+
+            Alumno alumno = null;
+
+            foreach (Alumno item in listaDeAlumnos)
+            {
+                if (item.Nombre == nombre)
+                {
+                    alumno = item;
+                    break;
+                }
+            }
+            return alumno;
+        }
+
+        public Alumno ObtenerPorDNI(int dni)
+        {
+            List<Alumno> listaDeAlumnos = ObtenerTodos();
+
+            Alumno alumno = null;
+
+            foreach (Alumno item in listaDeAlumnos)
+            {
+                if (item.Dni == dni)
+                {
+                    alumno = item;
+                    break;
+                }
+            }
+            return alumno;
+        }
+
     }
 }

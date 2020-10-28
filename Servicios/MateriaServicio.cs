@@ -52,20 +52,24 @@ namespace ProyectoDeEscuela
 
             return materias;
         }
-        Materia ObtenerPorNombre(string nombre)
+
+        public Materia ObtenerPorNombre(string nombre)
         {
             List<Materia> listaDeMaterias = ObtenerTodas();
-            Materia materia = null; 
-            foreach(Materia item in listaDeMaterias)
+
+            Materia materia = null;
+
+            foreach (Materia item in listaDeMaterias)
             {
-                if (item.Nombre == nombre){
+                if (item.Nombre == nombre)
+                {
                     materia = item;
                     break;
                 }
             }
-            return materia; 
+            return materia;
         }
 
-}
+    }
 }
 
